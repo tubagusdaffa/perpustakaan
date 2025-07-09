@@ -11,7 +11,7 @@
   <?php if ($this->session->userdata('role') === 'Admin'): ?>
     <div class="mb-3 text-end">
       <a href="<?= site_url('peminjaman/tambah') ?>" class="btn btn-primary">
-        ➕ Tambah Peminjaman
+        Tambah Data Peminjaman
       </a>
     </div>
   <?php endif ?>
@@ -26,7 +26,7 @@
           <th>Tgl Pinjam</th>
           <th>Tgl Kembali</th>
           <?php if ($this->session->userdata('role') === 'Admin'): ?>
-            <th>Status</th>
+            <th>Status Peminjaman</th>
             <th>Aksi</th>
           <?php endif ?>
         </tr>
@@ -44,8 +44,8 @@
               <?= ($p->status == 'Dikembalikan') ? '<span class="badge bg-success">Dikembalikan</span>' : '<span class="badge bg-warning text-dark">Dipinjam</span>' ?>
             </td>
             <td>
-              <a href="<?= site_url('peminjaman/edit/'.$p->id) ?>" class="btn btn-sm btn-warning me-1">✏️ Edit</a>
-              <a href="<?= site_url('peminjaman/hapus/'.$p->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin hapus?')">🗑️ Hapus</a>
+              <a href="<?= site_url('peminjaman/edit/'.$p->id) ?>" class="btn btn-sm btn-warning me-1">Edit</a>
+              <a href="<?= site_url('peminjaman/hapus/'.$p->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin hapus?')">Hapus</a>
             </td>
           <?php endif ?>
         </tr>

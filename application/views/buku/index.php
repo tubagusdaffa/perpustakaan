@@ -10,7 +10,7 @@
             type="text" 
             name="keyword" 
             class="form-control" 
-            placeholder="🔍 Cari berdasarkan judul, penulis, atau penerbit..." 
+            placeholder="Cari berdasarkan judul, penulis, atau penerbit..." 
             value="<?= isset($_GET['keyword']) ? htmlspecialchars($_GET['keyword']) : '' ?>"
           >
           <button type="submit" class="btn btn-primary">
@@ -33,7 +33,7 @@
   <?php if (isset($_GET['keyword']) && $_GET['keyword'] !== ''): ?>
     <?php if (empty($buku)): ?>
       <div class="alert alert-danger text-center fw-semibold fs-6">
-        ⚠️ Data buku yang Anda cari tidak tersedia.
+        ! Data buku yang Anda cari tidak tersedia.
       </div>
     <?php endif; ?>
     <div class="mb-3 text-start">
@@ -47,7 +47,7 @@
   <?php if ($this->session->userdata('role') === 'Admin'): ?>
     <div class="mb-3 text-end">
       <a href="<?= site_url('buku/tambah') ?>" class="btn btn-primary">
-        ➕ Tambah Buku
+        Tambah Data Buku
       </a>
     </div>
   <?php endif; ?>
@@ -80,12 +80,12 @@
               <td><?= $b->tahun_terbit ?></td>
               <td><?= $b->nama_kategori ?></td>
               <td>
-                <a href="<?= site_url('ulasan/index/'.$b->id) ?>" class="btn btn-sm btn-info">⭐ Lihat</a>
+                <a href="<?= site_url('ulasan/index/'.$b->id) ?>" class="btn btn-sm btn-info">Lihat Ulasan</a>
               </td>
               <?php if ($this->session->userdata('role') === 'Admin'): ?>
                 <td>
-                  <a href="<?= site_url('buku/edit/'.$b->id) ?>" class="btn btn-sm btn-warning me-1">✏️ Edit</a>
-                  <a href="<?= site_url('buku/hapus/'.$b->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin hapus?')">🗑️ Hapus</a>
+                  <a href="<?= site_url('buku/edit/'.$b->id) ?>" class="btn btn-sm btn-warning me-1">Edit</a>
+                  <a href="<?= site_url('buku/hapus/'.$b->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin hapus?')">Hapus</a>
                 </td>
               <?php endif ?>
             </tr>

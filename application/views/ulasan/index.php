@@ -2,7 +2,7 @@
   <h3 class="mb-4"><?= $title ?></h3>
 
   <div class="mb-4">
-    <h5 class="fw-bold">📚 <?= $buku->judul ?></h5>
+    <h5 class="fw-bold"><?= $buku->judul ?></h5>
     <p class="text-muted mb-0">
       Penulis: <?= $buku->penulis ?> | Penerbit: <?= $buku->penerbit ?>
     </p>
@@ -11,7 +11,7 @@
   <?php if ($this->session->userdata('role') === 'Anggota'): ?>
     <div class="mb-3 text-end">
       <a href="<?= site_url('ulasan/form/'.$buku->id) ?>" class="btn btn-success">
-        ✍️ Tulis Ulasan
+        Tulis Ulasan Anda 
       </a>
     </div>
   <?php endif; ?>
@@ -53,7 +53,7 @@
     </div>
   <?php else: ?>
     <div class="alert alert-warning text-center fw-semibold">
-      ⚠️ Belum ada ulasan untuk buku ini.
+      ! Belum ada ulasan untuk buku ini.
     </div>
   <?php endif; ?>
 

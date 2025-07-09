@@ -40,7 +40,7 @@
       <a href="<?= site_url('ulasan/index/'.$buku->id) ?>" class="btn btn-secondary">
         ← Kembali
       </a>
-      <button type="submit" class="btn btn-success">💾 Simpan Ulasan</button>
+      <button type="submit" class="btn btn-success">Simpan Ulasan</button>
     </div>
   </form>
 </div>

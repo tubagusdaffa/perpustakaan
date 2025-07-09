@@ -35,14 +35,14 @@
     </div>
 
     <div class="d-flex justify-content-between">
-      <button type="submit" class="btn btn-success">💾 Simpan</button>
-      <a href="<?= site_url('buku') ?>" class="btn btn-secondary">↩️ Kembali</a>
+      <button type="submit" class="btn btn-success">Simpan Data</button>
+      <a href="<?= site_url('buku') ?>" class="btn btn-secondary">Kembali</a>
     </div>
   </form>
 
   <div class="mt-4 text-end">
     <a href="<?= site_url('import') ?>" class="btn btn-outline-primary">
-      📥 Import Buku dari Excel
+      Import Buku dari Excel
     </a>
   </div>
 </div>

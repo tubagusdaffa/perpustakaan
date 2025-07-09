@@ -4,7 +4,7 @@
     
     <?php if ($this->session->userdata('role') === 'Admin'): ?>
       <a href="<?= site_url('anggota/tambah') ?>" class="btn btn-primary">
-        ➕ Tambah Anggota
+        Tambah Data Anggota
       </a>
     <?php endif ?>
   </div>
@@ -38,8 +38,8 @@
           <td><?= $a->jurusan ?></td>
           <?php if ($this->session->userdata('role') === 'Admin'): ?>
           <td>
-            <a href="<?= site_url('anggota/edit/'.$a->id) ?>" class="btn btn-sm btn-warning me-1">✏️ Edit</a>
-            <a href="<?= site_url('anggota/hapus/'.$a->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin hapus?')">🗑️ Hapus</a>
+            <a href="<?= site_url('anggota/edit/'.$a->id) ?>" class="btn btn-sm btn-warning me-1">Edit Data</a>
+            <a href="<?= site_url('anggota/hapus/'.$a->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin hapus?')">Hapus Data</a>
           </td>
           <?php endif ?>
         </tr>

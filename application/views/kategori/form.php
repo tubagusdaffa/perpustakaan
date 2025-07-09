@@ -9,10 +9,10 @@
 
     <div class="d-flex justify-content-between">
       <a href="<?= site_url('kategori') ?>" class="btn btn-secondary">
-        ⬅️ Kembali
+        Kembali
       </a>
       <button type="submit" class="btn btn-success">
-        💾 Simpan
+        Simpan Data
       </button>
     </div>
   </form>

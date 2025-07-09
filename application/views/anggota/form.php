@@ -23,10 +23,10 @@
 
       <div class="d-flex justify-content-between mt-4">
         <button type="submit" class="btn btn-success">
-          💾 Simpan
+          Simpan Data
         </button>
         <a href="<?= site_url('anggota') ?>" class="btn btn-secondary">
-          ⬅️ Kembali
+          Kembali
         </a>
       </div>
     </form>
