@@ -111,7 +111,7 @@
 <body>
 
   <div class="register-card">
-    <h2 class="register-header">Register Perpustakaan</h2>
+    <h2 class="register-header">Daftar Akun</h2>
 
     <?php if ($this->session->flashdata('error')): ?>
       <div class="alert mt-3">
@@ -122,17 +122,17 @@
     <form method="post" action="<?= site_url('auth/register') ?>">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
-        <input type="text" name="username" id="username" class="form-control" placeholder="Masukkan username..." required>
+        <input type="text" name="username" id="username" class="form-control" placeholder="Buat username anda..." required>
       </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Masukkan email..." required>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Masukkan email anda..." required>
       </div>
 
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan password..." required>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Buat password anda..." required>
       </div>
 
       <div class="mb-3">
@@ -151,7 +151,7 @@
 
     <div class="register-link mt-3">
       Sudah punya akun?
-      <a href="<?= site_url('auth/login') ?>">Login</a>
+      <a href="<?= site_url('auth/login') ?>">Login Disini</a>
     </div>
   </div>
 

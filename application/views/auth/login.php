@@ -122,12 +122,12 @@
     <form method="post" action="<?= site_url('auth/login') ?>">
       <div class="mb-3">
         <label for="username" class="form-label">Username</label>
-        <input type="text" name="username" id="username" class="form-control" placeholder="Masukkan username..." required>
+        <input type="text" name="username" id="username" class="form-control" placeholder="Masukkan username anda..." required>
       </div>
 
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
-        <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan password..." required>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan password anda..." required>
       </div>
 
       <button type="submit" class="btn btn-primary w-100 mt-3">
@@ -137,7 +137,7 @@
 
     <div class="login-link mt-3">
       Belum punya akun?
-      <a href="<?= site_url('auth/register') ?>">Register</a>
+      <a href="<?= site_url('auth/register') ?>">Daftar Disini</a>
     </div>
   </div>
 
