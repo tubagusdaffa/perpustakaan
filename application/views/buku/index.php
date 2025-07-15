@@ -1,7 +1,7 @@
 <div class="card shadow-sm p-4 mb-4">
   <h3 class="mb-4"><?= $title ?></h3>
 
-  <!-- ✅ Form Pencarian Buku (hanya untuk Anggota) -->
+  <!-- Form Pencarian Buku (hanya untuk Anggota) -->
   <?php if ($this->session->userdata('role') === 'Anggota'): ?>
     <div class="row mb-4 justify-content-center">
       <div class="col-md-8">
@@ -10,7 +10,7 @@
             type="text" 
             name="keyword" 
             class="form-control" 
-            placeholder="Cari berdasarkan judul, penulis, atau penerbit..." 
+            placeholder="Cari berdasarkan judul buku" 
             value="<?= isset($_GET['keyword']) ? htmlspecialchars($_GET['keyword']) : '' ?>"
           >
           <button type="submit" class="btn btn-primary">
@@ -21,15 +21,15 @@
     </div>
   <?php endif; ?>
 
-  <!-- ✅ Alert Anggota (hanya muncul kalau tidak sedang cari buku) -->
+  <!-- Alert Anggota (hanya muncul kalau tidak sedang cari buku) -->
   <?php if ($this->session->userdata('role') === 'Anggota' && (!isset($_GET['keyword']) || $_GET['keyword'] === '')): ?>
     <div class="alert alert-info text-center fw-semibold fs-6">
       Berikut adalah data buku yang tersedia di perpustakaan kami.<br>
-      📢 <span class="text-primary">Jika Anda ingin meminjam buku, silakan hubungi bagian admin.</span>
+       <span class="text-primary">Jika Anda ingin meminjam buku, silakan hubungi bagian admin.</span>
     </div>
   <?php endif; ?>
 
-  <!-- ✅ Jika sedang melakukan pencarian -->
+  <!-- Jika sedang melakukan pencarian -->
   <?php if (isset($_GET['keyword']) && $_GET['keyword'] !== ''): ?>
     <?php if (empty($buku)): ?>
       <div class="alert alert-danger text-center fw-semibold fs-6">
@@ -43,7 +43,7 @@
     </div>
   <?php endif; ?>
 
-  <!-- ✅ Tombol Tambah Buku (Admin saja) -->
+  <!-- Tombol Tambah Buku (Admin saja) -->
   <?php if ($this->session->userdata('role') === 'Admin'): ?>
     <div class="mb-3 text-end">
       <a href="<?= site_url('buku/tambah') ?>" class="btn btn-primary">
@@ -52,7 +52,7 @@
     </div>
   <?php endif; ?>
 
-  <!-- ✅ Tampilkan tabel hanya kalau data buku tidak kosong -->
+  <!-- Tampilkan tabel hanya kalau data buku tidak kosong -->
   <?php if (!empty($buku)): ?>
     <div class="table-responsive">
       <table class="table table-bordered table-hover align-middle text-center">

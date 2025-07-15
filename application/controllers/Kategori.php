@@ -9,7 +9,7 @@ class Kategori extends CI_Controller
   if (!$this->session->userdata('logged_in')) {
     redirect('auth/login');
   }
-    // ✅ Cek apakah user adalah admin
+    // Cek apakah user adalah admin
  if ($this->session->userdata('role') !== 'Admin') {
         redirect('dashboard');
         }

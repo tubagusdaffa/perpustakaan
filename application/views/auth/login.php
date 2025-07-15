@@ -30,7 +30,7 @@
       color: #fff;
       border: 1px solid rgba(255,255,255,0.25);
 
-      /* ✅ Tambah background logo ke dalam kotak */
+      /* Tambah background logo ke dalam kotak */
       background-image: url('<?= base_url("assets/images/logo.png") ?>');
       background-repeat: no-repeat;
       background-position: center;

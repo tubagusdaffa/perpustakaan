@@ -8,12 +8,12 @@ class Import extends CI_Controller
     {
         parent::__construct();
 
-        // ✅ Cek login
+        // Cek login
         if (!is_logged_in()) {
             redirect('auth/login');
         }
 
-        // ✅ Cek role admin
+        // Cek role admin
         if (!is_admin()) {
             show_error('Akses ditolak. Halaman ini hanya bisa diakses oleh admin.');
         }

@@ -4,7 +4,7 @@
   <?php if ($this->session->userdata('role') === 'Anggota'): ?>
     <div class="alert alert-info text-center fw-semibold fs-6">
       Berikut adalah daftar peminjam buku di perpustakaan kami.<br>
-      📢 <span class="text-primary">Jika ingin meminjam buku silahkan hubungi bagian admin.</span>
+       <span class="text-primary">Jika ingin meminjam buku silahkan hubungi bagian admin.</span>
     </div>
   <?php endif; ?>
 

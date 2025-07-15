@@ -12,7 +12,7 @@
   <?php if ($this->session->userdata('role') === 'Anggota'): ?>
     <div class="alert alert-info text-center fw-semibold fs-6">
       Berikut adalah data anggota yang terdaftar di perpustakaan kami.<br>
-      📢 <span class="text-primary">Jika ingin daftar menjadi anggota silahkan hubungi bagian admin.</span>
+      <span class="text-primary">Jika ingin daftar menjadi anggota silahkan hubungi bagian admin.</span>
     </div>
   <?php endif; ?>
 

@@ -7,7 +7,7 @@ class Ulasan extends CI_Controller
     {
         parent::__construct();
 
-        // ✅ Set timezone ke WIB
+        // Set timezone ke WIB
         date_default_timezone_set('Asia/Jakarta');
 
         if (!$this->session->userdata('logged_in')) {

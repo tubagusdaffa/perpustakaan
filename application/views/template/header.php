@@ -59,7 +59,7 @@
 <body>
 
 <?php if ($this->session->userdata('logged_in')): ?>
-  <!-- ✅ Sidebar -->
+  <!-- Sidebar -->
   <div class="sidebar">
     <a href="<?= site_url('dashboard') ?>" class="sidebar-brand">Perpustakaan</a>
     <ul class="nav flex-column">
@@ -104,5 +104,5 @@
   </div>
 <?php endif; ?>
 
-<!-- ✅ Konten Utama -->
+<!-- Konten Utama -->
 <div class="content">
